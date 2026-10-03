@@ -123,3 +123,12 @@ body {
     color: inherit;
     display: block;
 }
+
+h1 {
+    font-family: Geneva, Verdana, sans-serif;
+}
+
+p {
+    font-family: Geneva, Verdana, sans-serif;
+    font-size: 25px;
+}
