@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    overflow: hidden;
+}
+
+
+.gradient {
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        -45deg,
+        #ff99fa,
+        #fddcdc,
+        #e2f862,
+        #b45b63,
+        #4a2dec,
+        #0093f5,
+        #060061,
+        #4bf517
+    );
+
+    background-size: 1000% 1000%;
+    animation: gradientMove 10s ease infinite;
+}
+
+.middle-box {
+    
+    position: relative;
+
+    width: 700px;
+    max-width: 90vw;
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 50px;
+
+    background:
+        linear-gradient(#ffe0ce, #ffe0ce) padding-box,
+        linear-gradient(
+            90deg,
+            #ff4fd8,
+            #6c5ce7,
+            #0093f5,
+            #4bf517,
+            #ff4fd8
+        ) border-box;
+
+    border: 5px solid transparent;
+    border-radius: 50px;
+
+    background-size: 100% 100%, 400% 100%;
+
+    animation: borderMove 5s linear infinite;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.middle-box:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 30px 65px rgba(0, 0, 0, 0.45);
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes borderMove {
+    0% {
+        background-position: 0 0, 0% 50%;
+    }
+
+    50% {
+        background-position: 0 0, 100% 50%;
+    }
+
+    100% {
+        background-position: 0 0, 0% 50%;
+    }
+}
+
+.middle-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
